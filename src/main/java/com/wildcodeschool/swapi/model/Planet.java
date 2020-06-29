@@ -8,20 +8,20 @@ public class Planet {
 
     private String name;
     @JsonProperty("rotation_period")
-    private String rotationPeriod; //int
+    private int rotationPeriod;
     @JsonProperty("orbital_period")
-    private String orbitalPeriod; //int
-    private String diameter; //int
+    private int orbitalPeriod;
+    private int diameter;
     private String climate;
     private String gravity;
     private String terrain;
     @JsonProperty("surface_water")
-    private String surfaceWater; //int
-    private String population; //int
+    private int surfaceWater;
+    private int population;
     private String[] residents;
     private String[] films;
-    private String created; //Date
-    private String edited;  //Date
+    private Date created;
+    private Date edited;
     private String url;
 
     public Planet() {
@@ -35,27 +35,27 @@ public class Planet {
         this.name = name;
     }
 
-    public String getRotationPeriod() {
+    public int getRotationPeriod() {
         return rotationPeriod;
     }
 
-    public void setRotationPeriod(String rotationPeriod) {
+    public void setRotationPeriod(int rotationPeriod) {
         this.rotationPeriod = rotationPeriod;
     }
 
-    public String getOrbitalPeriod() {
+    public int getOrbitalPeriod() {
         return orbitalPeriod;
     }
 
-    public void setOrbitalPeriod(String orbitalPeriod) {
+    public void setOrbitalPeriod(int orbitalPeriod) {
         this.orbitalPeriod = orbitalPeriod;
     }
 
-    public String getDiameter() {
+    public int getDiameter() {
         return diameter;
     }
 
-    public void setDiameter(String diameter) {
+    public void setDiameter(int diameter) {
         this.diameter = diameter;
     }
 
@@ -83,19 +83,19 @@ public class Planet {
         this.terrain = terrain;
     }
 
-    public String getSurfaceWater() {
+    public int getSurfaceWater() {
         return surfaceWater;
     }
 
-    public void setSurfaceWater(String surfaceWater) {
+    public void setSurfaceWater(int surfaceWater) {
         this.surfaceWater = surfaceWater;
     }
 
-    public String getPopulation() {
+    public int getPopulation() {
         return population;
     }
 
-    public void setPopulation(String population) {
+    public void setPopulation(int population) {
         this.population = population;
     }
 
@@ -115,19 +115,19 @@ public class Planet {
         this.films = films;
     }
 
-    public String getCreated() {
+    public Date getCreated() {
         return created;
     }
 
-    public void setCreated(String created) {
+    public void setCreated(Date created) {
         this.created = created;
     }
 
-    public String getEdited() {
+    public Date getEdited() {
         return edited;
     }
 
-    public void setEdited(String edited) {
+    public void setEdited(Date edited) {
         this.edited = edited;
     }
 
