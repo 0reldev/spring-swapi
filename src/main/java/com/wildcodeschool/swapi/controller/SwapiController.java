@@ -36,12 +36,13 @@ public class SwapiController {
 
         ObjectMapper objectMapper = new ObjectMapper();
         Planet planetObject = null;
-        try{
+        try {
+
             planetObject = objectMapper.readValue(response, Planet.class);
         } catch (JsonProcessingException e) {
+
             e.printStackTrace();
         }
-
         model.addAttribute("planetInfos", planetObject);
 
         return "planet";
@@ -57,17 +58,16 @@ public class SwapiController {
                         .build(id))
                 .retrieve()
                 .bodyToMono(String.class);
-
         String response = call.block();
-
         ObjectMapper objectMapper = new ObjectMapper();
         People peopleObject = null;
         try {
+
             peopleObject = objectMapper.readValue(response, People.class);
         } catch (JsonProcessingException e) {
+
             e.printStackTrace();
         }
-
         model.addAttribute("peopleInfos", peopleObject);
 
         return "people";

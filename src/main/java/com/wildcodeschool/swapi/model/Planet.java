@@ -1,27 +1,39 @@
 package com.wildcodeschool.swapi.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.Date;
 
 public class Planet {
 
     private String name;
+
     @JsonProperty("rotation_period")
     private int rotationPeriod;
+
     @JsonProperty("orbital_period")
     private int orbitalPeriod;
+
     private int diameter;
+
     private String climate;
+
     private String gravity;
+
     private String terrain;
+
     @JsonProperty("surface_water")
     private int surfaceWater;
+
     private int population;
+
     private String[] residents;
+
     private String[] films;
+
     private Date created;
+
     private Date edited;
+
     private String url;
 
     public Planet() {
@@ -138,5 +150,4 @@ public class Planet {
     public void setUrl(String url) {
         this.url = url;
     }
-
 }
